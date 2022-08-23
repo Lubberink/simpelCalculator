@@ -1,0 +1,24 @@
+<div class="example-container">
+  <form [formGroup]="formData" (ngSubmit)="onSubmit(formData.value)">
+    <mat-form-field>
+      <mat-label>Vul een getal in</mat-label>
+      <input formControlName="number1" name="number1" matInput #input maxlength="10" placeholder="14" type="number">
+    </mat-form-field>
+
+    <mat-form-field appearance="standard">
+      <mat-label>Operation</mat-label>
+      <mat-select formControlName="operator" value="x">
+        <mat-option value="x">X</mat-option>
+        <mat-option value="/">/</mat-option>
+        <mat-option value="+">+</mat-option>
+        <mat-option value="-">-</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Vul een getal in</mat-label>
+      <input formControlName="number2"  name="number2" matInput #input maxlength="10" placeholder="14" type="number">
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Reken uit</button>
+  </form>
+</div>

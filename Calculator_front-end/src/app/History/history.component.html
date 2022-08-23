@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{pageTitle}}</title>
+</head>
+<body>
+<table>
+  <tr *ngFor="let calculation of historyCalculations">
+    <td>{{calculation.number1}}</td>
+    <td>{{calculation.operator}}</td>
+    <td>{{calculation.number2}}</td>
+    <td> = </td>
+    <td>{{calculation.result}}</td>
+  </tr>
+</table>
+</body>
+</html>
